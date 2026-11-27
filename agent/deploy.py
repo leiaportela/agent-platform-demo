@@ -5,7 +5,7 @@ The engine is created once with both bindings: changing a gateway binding later 
 earlier revision. Modeled on the Agent Gateway codelab's deploy_agent.py (identity_type +
 agent_gateway_config), written for this demo.
 
-Usage: agent/.venv/bin/python agent/deploy.py [--update ENGINE_RESOURCE_NAME]
+Usage: source infra/env.sh && agent/.venv/bin/python agent/deploy.py [--update ENGINE_RESOURCE_NAME]
 """
 
 import argparse
@@ -16,12 +16,21 @@ import sys
 import tempfile
 import tomllib
 
-PROJECT = "your-project-id"
-REGION = "us-central1"
-STAGING = "gs://agent-demo-staging-123456789012"
-EGW = f"projects/{PROJECT}/locations/{REGION}/agentGateways/agent-demo-egress-gw"
-IGW = f"projects/{PROJECT}/locations/{REGION}/agentGateways/agent-demo-ingress-gw"
-MCP_URL = "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp"
+
+def _env(name: str) -> str:
+    value = os.environ.get(name)
+    if not value:
+        sys.exit(f"{name} is not set: run `source infra/env.sh` first (it holds the project's values)")
+    return value
+
+
+# All project values come from infra/env.sh.
+PROJECT = _env("PROJ_ID")
+REGION = _env("REGION")
+STAGING = f"gs://{_env('STAGING_BUCKET')}"
+EGW = _env("EGW_URI")
+IGW = _env("IGW_URI")
+MCP_URL = _env("MCP_BASE_URL").rstrip("/") + "/mcp"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # Workaround from the codelab for source-based ADK deploys: a /code/.venv that points at the
@@ -67,7 +76,7 @@ def main() -> None:
         os.chmod(script, stat.S_IRWXU | stat.S_IRGRP | stat.S_IXGRP)
         sys.path.insert(0, staging)
         os.chdir(staging)
-        os.environ["MCP_URL"] = MCP_URL  # never inherit a shell MCP_URL (env.sh exports the bare service URL)
+        os.environ["MCP_URL"] = MCP_URL  # the agent's MCP endpoint is MCP_BASE_URL + /mcp, never a shell MCP_URL
         from agent.agent import root_agent
 
         config = {

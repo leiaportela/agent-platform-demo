@@ -5,7 +5,8 @@
 # Usage: ./deploy_ui.sh [PRESENTER_EMAIL]
 set -euo pipefail
 cd "$(dirname "$0")" && source env.sh
-PRESENTER=${1:-presenter@example.com}
+PRESENTER=${1:-$PRESENTER}
+[ -n "$ENGINE" ] || { echo "ENGINE is not set in env.sh (agent/deploy.py prints it)"; exit 1; }
 TAG=$(date +%Y%m%d-%H%M%S)
 IMG=$REGION-docker.pkg.dev/$PROJ_ID/agent-demo/ui:$TAG
 $GCLOUD builds submit ../ui --tag=$IMG --region=$REGION --project=$PROJ_ID \
@@ -15,7 +16,7 @@ $GCLOUD run deploy agent-demo-ui --image=$IMG --region=$REGION --project=$PROJ_I
   --service-account=agent-demo-ui@$PROJ_ID.iam.gserviceaccount.com \
   --no-allow-unauthenticated --iap --ingress=all \
   --min-instances=1 --max-instances=1 --timeout=600 --cpu=1 --memory=1Gi \
-  --set-env-vars=ENGINE=$ENGINE,PROJECT=$PROJ_ID,REGION=$REGION \
+  --set-env-vars=ENGINE=$ENGINE,PROJECT=$PROJ_ID,REGION=$REGION,AGENT_ORG=$ORG_ID \
   --labels=app=agent-demo --quiet | tail -3
 $GCLOUD run services add-iam-policy-binding agent-demo-ui --region=$REGION --project=$PROJ_ID \
   --member=serviceAccount:service-$PROJ_NO@gcp-sa-iap.iam.gserviceaccount.com --role=roles/run.invoker --quiet >/dev/null

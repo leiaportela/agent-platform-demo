@@ -15,7 +15,7 @@ import json
 import os
 import sys
 
-PROJECT = os.environ.get("BQ_PROJECT", "your-project-id")
+PROJECT = os.environ.get("BQ_PROJECT") or os.environ.get("PROJ_ID") or sys.exit("BQ_PROJECT is not set: run `source infra/env.sh` first")
 DATASET = os.environ.get("BQ_DATASET", "vertex_demo_dashboard")
 HORIZON_DAYS = 14
 

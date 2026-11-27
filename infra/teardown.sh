@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Remove everything the agent demo created in your-project-id (run after the demo, on purpose).
+# Remove everything the agent demo created in $PROJ_ID (from env.sh). Run it after the demo, on purpose.
 # Asks for confirmation. Leaves the enabled APIs and the pipelines demo untouched.
 set -uo pipefail
 cd "$(dirname "$0")" && source env.sh
@@ -9,8 +9,12 @@ run() { echo "+ $*"; "$@" --quiet 2>&1 | grep -v -i warn | tail -2; }
 
 TOK=$($GCLOUD auth print-access-token)
 # 1. Agent Runtime engine (force: deletes its sessions too)
-/usr/bin/curl -s -X DELETE -H "Authorization: Bearer $TOK" \
-  "https://$REGION-aiplatform.googleapis.com/v1beta1/$ENGINE?force=true" | head -c 300; echo
+if [ -n "$ENGINE" ]; then
+  /usr/bin/curl -s -X DELETE -H "Authorization: Bearer $TOK" \
+    "https://$REGION-aiplatform.googleapis.com/v1beta1/$ENGINE?force=true" | head -c 300; echo
+else
+  echo "ENGINE is not set in env.sh: skipping the engine"
+fi
 # 2. Gateways: policies, extensions, gateways
 run $GCLOUD beta network-security authz-policies delete ${EGW}-authz-policy-iap --location=$REGION --project=$PROJ_ID
 run $GCLOUD beta network-security authz-policies delete ${IGW}-authz-policy-modelarmor --location=$REGION --project=$PROJ_ID

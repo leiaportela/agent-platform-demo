@@ -12,6 +12,7 @@ side: Agent Runtime queries, BigQuery SELECTs and Cloud Logging `entries.list`, 
 cd evals
 uv venv .venv && uv pip install --python .venv/bin/python -r requirements.txt
 gcloud auth application-default login   # ADC: BigQuery, Agent Runtime, Cloud Logging read
+source ../infra/env.sh                  # PROJ_ID, ORG_ID, BQ_PROJECT, ENGINE: the scripts stop without them
 ```
 
 ## Commands
@@ -21,7 +22,6 @@ gcloud auth application-default login   # ADC: BigQuery, Agent Runtime, Cloud Lo
 .venv/bin/python ground_truth.py
 
 # 2. one query by hand (ADK event JSON lines; same format as local_query.py)
-export ENGINE=projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789
 .venv/bin/python engine_client.py --engine $ENGINE "Who are the customers most at risk of churning, and why?" | python3 show_events.py
 
 # 3. the evals (default: scripted set, 10 runs per prompt, one at a time)

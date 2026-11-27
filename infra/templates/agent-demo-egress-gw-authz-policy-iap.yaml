@@ -1,0 +1,10 @@
+name: agent-demo-egress-gw-authz-policy-iap
+target:
+  resources:
+    - "projects/${PROJ_ID}/locations/${REGION}/agentGateways/agent-demo-egress-gw"
+policyProfile: REQUEST_AUTHZ
+action: CUSTOM
+customProvider:
+  authzExtension:
+    resources:
+      - "projects/${PROJ_ID}/locations/${REGION}/authzExtensions/agent-demo-egress-gw-authz-iap-dryrun"

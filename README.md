@@ -36,23 +36,24 @@ browser ──IAP──▶ chat UI (Cloud Run)
 
 ## Using it in your own project
 
-Project-specific values are placeholders:
+All project-specific values live in one file, **`infra/env.sh`**: project id, project number, organization, region,
+presenter email, and (once `agent/deploy.py` has printed it) `ENGINE`. Everything else is derived from those, or
+read from them:
+- the staging bucket, MCP URL, gateway names and the agent principal;
+- `agent/deploy.py`, the evals, the helper scripts and the UI/MCP backends read them from the environment, and
+  stop with "source infra/env.sh" if they are missing;
+- the gateway and authz YAMLs are templates in `infra/templates/`, and `infra/render.sh` fills in `${PROJ_ID}` and
+  `${REGION}` into `infra/rendered/`;
+- `infra/deploy_ui.sh` passes `PROJECT`, `REGION`, `ENGINE` and `AGENT_ORG` to the Cloud Run service.
 
-- project `your-project-id`
-- project number `123456789012`
-- organization `111111111111`
-- engine `1234567890123456789`
-- presenter `presenter@example.com`
+```bash
+$EDITOR infra/env.sh        # set PROJ_ID, PROJ_NO, ORG_ID, REGION, PRESENTER
+source infra/env.sh         # in every shell you run the scripts from
+infra/render.sh             # gateway / authz YAMLs for `gcloud ... import --source=infra/rendered/<name>.yaml`
+```
 
-Set your own values in `infra/env.sh`. They are also hard-coded in:
-- `agent/deploy.py`
-- `ui/backend/settings.py`
-- `mcp_server/main.py`
-- `evals/log_fields.py`
-- `evals/ground_truth.py`
-- the `infra/*.yaml` files
-
-The engine id exists only after `agent/deploy.py` has run.
+The files in this repo still show placeholder defaults (`your-project-id`, `123456789012`, `111111111111`,
+`presenter@example.com`); `env.sh` warns while `PROJ_ID` is the placeholder.
 
 The order that worked:
 1. Outbound gateway with IAP authz in dry run, and the Agent Registry entries (`infra/register.sh`). Bind an engine
@@ -72,3 +73,7 @@ The order that worked:
 and registry identifiers in them have been replaced with the placeholders above, so the links in them do not
 resolve. The live MCP smoke tests (`mcp_server/tests/test_tools_live.py`) need a real project and fail with the
 placeholders. The UI and eval test suites run offline.
+
+## License
+
+Apache License 2.0. See [`LICENSE`](LICENSE).

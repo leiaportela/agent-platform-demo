@@ -57,8 +57,8 @@ function Side({ steps, label }) {
 }
 
 export default function Architecture({ config }) {
-  const project = config?.project || "your-project-id";
-  const region = config?.region || "us-central1";
+  const project = config?.project || "…";
+  const region = config?.region || "…";
   const inbound = base(config?.gateways?.inbound) || "agent-demo-ingress-gw";
   const outbound = base(config?.gateways?.outbound) || "agent-demo-egress-gw";
   const engineId = base(config?.engine);

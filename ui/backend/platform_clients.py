@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 import shutil
 import subprocess
 import time
@@ -46,7 +47,7 @@ class TokenSource:
             pass
         if self._cli_token and time.time() - self._cli_token[1] < 1800:
             return self._cli_token[0]
-        gcloud = shutil.which("gcloud") or "/snap/bin/gcloud"
+        gcloud = os.environ.get("GCLOUD") or shutil.which("gcloud") or "gcloud"
         token = subprocess.check_output([gcloud, "auth", "print-access-token"], text=True).strip()
         self._cli_token = (token, time.time())
         return token

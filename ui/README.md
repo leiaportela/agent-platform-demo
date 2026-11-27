@@ -21,8 +21,8 @@ HTTP response.)
 cd ui/backend
 uv venv .venv -p 3.12 && uv pip install --python .venv/bin/python -r requirements-dev.txt
 gcloud auth application-default login            # ADC: needs aiplatform + logging read on the project
-ENGINE=projects/123456789012/locations/us-central1/reasoningEngines/<ID> \
-  .venv/bin/uvicorn main:app --port 8080 --reload
+source ../../infra/env.sh                        # PROJECT, AGENT_ORG, ENGINE, REGION
+.venv/bin/uvicorn main:app --port 8080 --reload
 .venv/bin/python -m pytest -q                    # backend tests
 
 # frontend (dev server on :5173, proxies /api to :8080; API_TARGET overrides the target)
@@ -37,8 +37,8 @@ npm run build                                    # or build once and let the bac
 |---|---|---|
 | `ENGINE` | (required for live use) | `projects/P/locations/L/reasoningEngines/ID`; validated at startup (a malformed value stops the backend). The Agent Runtime region is `L` |
 | `REGION` | unset | optional; if set it must equal the region in `ENGINE` (startup error otherwise) |
-| `PROJECT` | `your-project-id` | project for Cloud Logging and console links |
-| `AGENT_ORG` | `111111111111` | organization in the agent's principal. The principal (`principal://agents.global.org-<ORG>.system.id.goog/resources/aiplatform/projects/<number>/locations/<L>/reasoningEngines/<ID>`) is built from `ENGINE`, which must name the project by **number**; otherwise no IAP decisions are polled. `/api/config` shows it as `agent_principal` |
+| `PROJECT` | (required unless `DEV_REPLAY`) | project for Cloud Logging and console links; `infra/env.sh` sets it from `PROJ_ID` |
+| `AGENT_ORG` | unset | organization in the agent's principal (`infra/env.sh` sets it from `ORG_ID`; unset means no IAP decisions are polled). The principal (`principal://agents.global.org-<ORG>.system.id.goog/resources/aiplatform/projects/<number>/locations/<L>/reasoningEngines/<ID>`) is built from `ENGINE`, which must name the project by **number**; otherwise no IAP decisions are polled. `/api/config` shows it as `agent_principal` |
 | `INBOUND_GATEWAY` / `OUTBOUND_GATEWAY` | `agent-demo-ingress-gw` / `agent-demo-egress-gw` | names matched against `resource.labels.gateway_name` |
 | `LOG_POLL_INTERVAL_S` | `3` (minimum 3) | one `entries.list` per tick for all open turns |
 | `LOG_MAX_BACKOFF_S` | `60` | after HTTP 429 the delay doubles (6 s, 12 s, …) up to this |

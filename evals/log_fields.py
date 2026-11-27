@@ -39,18 +39,28 @@ from __future__ import annotations
 import base64
 import binascii
 import datetime
+import os
 import re
 import urllib.parse
 from typing import Any
 
-PROJECT = "your-project-id"
+
+
+def _env(*names: str) -> str:
+    for name in names:
+        if os.environ.get(name):
+            return os.environ[name]
+    raise RuntimeError(f"{names[0]} is not set: run `source infra/env.sh` first (it holds the project's values)")
+
+
+PROJECT = _env("PROJ_ID", "PROJECT")
 EGRESS_GW = "agent-demo-egress-gw"
 INGRESS_GW = "agent-demo-ingress-gw"
 GATEWAYS = (INGRESS_GW, EGRESS_GW)
 GATEWAY_CLIENT = "AGENT_GATEWAY"
 
-# the agent identity of an Agent Runtime engine: org is fixed config, project number / region / engine id come from ENGINE
-AGENT_ORG = "111111111111"
+# the agent identity of an Agent Runtime engine: org from env.sh, project number / region / engine id from ENGINE
+AGENT_ORG = _env("ORG_ID", "AGENT_ORG")
 IAP_SERVICE = "iap.googleapis.com"
 IAP_METHOD = "GatekeeperAuthorizer.AuthorizeUser"
 IAP_MCP_RESOURCE_TYPE = "agentregistry.googleapis.com/McpServer"

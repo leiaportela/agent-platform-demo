@@ -1,11 +1,11 @@
 """Fetch the platform log records for a time window (gateway requests + Model Armor) and save raw.
-Usage: python3 -I infra/fetch_logs.py LABEL SINCE_UTC [UNTIL_UTC]"""
+Usage: source infra/env.sh && python3 -I infra/fetch_logs.py LABEL SINCE_UTC [UNTIL_UTC]"""
 import json, os, subprocess, sys, urllib.request
 
 label, since = sys.argv[1], sys.argv[2]
 until = sys.argv[3] if len(sys.argv) > 3 else None
-P = "your-project-id"
-tok = subprocess.check_output(["/snap/bin/gcloud", "auth", "print-access-token"], text=True).strip()
+P = os.environ.get("PROJ_ID") or sys.exit("PROJ_ID is not set: run `source infra/env.sh` first")
+tok = subprocess.check_output([os.environ.get("GCLOUD", "gcloud"), "auth", "print-access-token"], text=True).strip()
 win = f'timestamp>="{since}"' + (f' AND timestamp<="{until}"' if until else "")
 flt = (f'({win}) AND (resource.type="networkservices.googleapis.com/Gateway" OR '
        f'logName="projects/{P}/logs/modelarmor.googleapis.com%2Fsanitize_operations")')

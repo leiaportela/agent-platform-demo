@@ -15,7 +15,7 @@ import urllib.request
 engine, label, prompt = sys.argv[1:4]
 region = engine.split("/")[3]
 base = f"https://{region}-aiplatform.googleapis.com/v1beta1/{engine}"
-tok = subprocess.check_output(["/snap/bin/gcloud", "auth", "print-access-token"], text=True).strip()
+tok = subprocess.check_output([os.environ.get("GCLOUD", "gcloud"), "auth", "print-access-token"], text=True).strip()
 hdr = {"Authorization": f"Bearer {tok}", "Content-Type": "application/json"}
 out = os.path.join(os.path.dirname(__file__), "..", "demo", "evidence", "raw-run")
 os.makedirs(out, exist_ok=True)

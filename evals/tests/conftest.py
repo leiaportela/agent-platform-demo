@@ -4,6 +4,11 @@ import sys
 
 import pytest
 
+# The recorded samples carry these placeholder values; real runs get them from infra/env.sh.
+os.environ.setdefault("PROJ_ID", "your-project-id")
+os.environ.setdefault("ORG_ID", "111111111111")
+os.environ.setdefault("BQ_PROJECT", "your-project-id")
+
 EVALS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SAMPLES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "samples")
 sys.path.insert(0, EVALS)

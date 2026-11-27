@@ -1,6 +1,0 @@
-name: agent-demo-ingress-gw-authz-modelarmor
-service: modelarmor.us-central1.rep.googleapis.com
-failOpen: false
-timeout: 10s
-metadata:
-  model_armor_settings: '[{"request_template_id": "projects/your-project-id/locations/us-central1/templates/agent-demo-armor", "response_template_id": "projects/your-project-id/locations/us-central1/templates/agent-demo-armor"}]'

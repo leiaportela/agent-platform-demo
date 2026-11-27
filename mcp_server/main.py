@@ -1,7 +1,7 @@
 """MCP server for the agent demo: read-only tools over the Vertex AI Pipelines demo results.
 
 Every tool reads the run-versioned tables the pipeline publishes to
-`your-project-id.vertex_demo_dashboard`, except `get_customer_contact`, which reads real
+`<project>.vertex_demo_dashboard`, except `get_customer_contact`, which reads real
 personal data (name, email, address) from `bigquery-public-data.thelook_ecommerce.users`. That one
 is the tool the outbound Agent Gateway denies for the agent; it exists so the deny is real.
 
@@ -18,7 +18,9 @@ from starlette.applications import Starlette
 from starlette.responses import JSONResponse
 from starlette.routing import Mount, Route
 
-PROJECT = os.environ.get("BQ_PROJECT", "your-project-id")
+# The project that holds vertex_demo_dashboard: BQ_PROJECT (infra/env.sh / the Cloud Run service), else the
+# project of the runtime's credentials (on Cloud Run, the service's own project).
+PROJECT = os.environ.get("BQ_PROJECT") or os.environ.get("GOOGLE_CLOUD_PROJECT") or None
 DATASET = "vertex_demo_dashboard"
 TABLES = frozenset({
     "runs", "step_timings", "models", "model_metrics", "churn_feature_importance",
@@ -33,14 +35,14 @@ _client: bigquery.Client | None = None
 def _bq() -> bigquery.Client:
     global _client
     if _client is None:
-        _client = bigquery.Client(project=PROJECT)
+        _client = bigquery.Client(project=PROJECT)  # None: inferred from the credentials
     return _client
 
 
 def _t(name: str) -> str:
     if name not in TABLES:
         raise ValueError(f"table {name!r} is not readable by this server")
-    return f"`{PROJECT}.{DATASET}.{name}`"
+    return f"`{_bq().project}.{DATASET}.{name}`"
 
 
 def _plain(value):

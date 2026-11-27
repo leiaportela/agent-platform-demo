@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 # projects/<project id or number>/locations/<region>/reasoningEngines/<numeric id>
 ENGINE_RE = re.compile(r"^projects/([A-Za-z0-9._:-]+)/locations/([a-z0-9-]+)/reasoningEngines/([0-9]+)$")
@@ -13,8 +13,7 @@ ENGINE_RE = re.compile(r"^projects/([A-Za-z0-9._:-]+)/locations/([a-z0-9-]+)/rea
 MIN_POLL_INTERVAL_S = 3.0
 # Model Armor sanitize records can show up in entries.list long after the answer.
 MIN_LINGER_S = 75.0
-# The organization in the agent's Agent Identity principal (fixed config of this demo; AGENT_ORG overrides).
-AGENT_ORG = "111111111111"
+# The organization in the agent's Agent Identity principal comes from AGENT_ORG (infra/env.sh sets it from ORG_ID).
 
 
 class SettingsError(ValueError):
@@ -24,7 +23,7 @@ class SettingsError(ValueError):
 @dataclass(frozen=True)
 class Settings:
     engine: str | None = None
-    project: str = "your-project-id"
+    project: str = field(default_factory=lambda: os.environ.get("PROJECT", ""))
     inbound_gw: str = "agent-demo-ingress-gw"
     outbound_gw: str = "agent-demo-egress-gw"
     poll_interval_s: float = MIN_POLL_INTERVAL_S  # one entries.list per tick for all open turns
@@ -37,7 +36,7 @@ class Settings:
     dev_replay: str | None = None  # DEV_REPLAY: a recorded turn file (JSON lines); local development only
     record_dir: str | None = None  # RECORD_DIR: append every live turn's messages here (to make replays)
     engine_console_url: str | None = None
-    agent_org: str = AGENT_ORG  # AGENT_ORG: organization number in the agent's principal
+    agent_org: str | None = field(default_factory=lambda: os.environ.get("AGENT_ORG") or None)  # org number in the principal
 
     def __post_init__(self) -> None:
         if self.engine is not None and not ENGINE_RE.match(self.engine):
@@ -68,7 +67,7 @@ class Settings:
         env = os.environ.get
         settings = cls(
             engine=env("ENGINE") or None,
-            project=env("PROJECT") or "your-project-id",
+            project=env("PROJECT") or "",
             inbound_gw=env("INBOUND_GATEWAY") or "agent-demo-ingress-gw",
             outbound_gw=env("OUTBOUND_GATEWAY") or "agent-demo-egress-gw",
             poll_interval_s=max(MIN_POLL_INTERVAL_S, float(env("LOG_POLL_INTERVAL_S") or MIN_POLL_INTERVAL_S)),
@@ -79,8 +78,10 @@ class Settings:
             dev_replay=env("DEV_REPLAY") or None,
             record_dir=env("RECORD_DIR") or None,
             engine_console_url=env("ENGINE_CONSOLE_URL") or None,
-            agent_org=env("AGENT_ORG") or AGENT_ORG,
+            agent_org=env("AGENT_ORG") or None,
         )
+        if not settings.project and not settings.dev_replay:
+            raise SettingsError("PROJECT is not set: source infra/env.sh (or set PROJECT on the Cloud Run service)")
         region = env("REGION")
         if region and settings.region and region != settings.region:
             raise SettingsError(f"REGION={region!r} differs from the region in ENGINE ({settings.region!r})")
