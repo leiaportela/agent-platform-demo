@@ -1,0 +1,145 @@
+[
+ {
+  "insertId": "19sql18f2kudfm",
+  "jsonPayload": {
+   "tlsSniHostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+   "mtls": {
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertChainVerified": "false"
+   },
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:mcp:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-agent-demo-mcp",
+    "mcpInfo": {
+     "parameter": "get_customer_contact",
+     "method": "tools/call"
+    },
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "authzPolicyInfo": {
+    "result": "DENIED",
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "DENIED"
+     }
+    ]
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "serverNameIndication": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "hostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "requestWasTlsIntercepted": true
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp",
+   "requestSize": "3532",
+   "status": 403,
+   "responseSize": "193",
+   "userAgent": "python-httpx/0.28.1",
+   "remoteIp": "7.0.2.2:1029",
+   "latency": "0.056190s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "gateway_name": "agent-demo-egress-gw",
+    "resource_container": "123456789012",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:05:45.253452Z",
+  "severity": "WARNING",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "trace": "5c380538565aa43a038f14984491c3cc",
+  "receiveTimestamp": "2026-11-26T21:05:48.761022129Z",
+  "spanId": "2cd6f44840ca4bf1",
+  "traceSampled": true
+ },
+ {
+  "insertId": "19sql18f2kudfi",
+  "jsonPayload": {
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "mtls": {
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertPresent": "true"
+   },
+   "tlsSniHostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+   "agentGatewayInfo": {
+    "mcpInfo": {
+     "method": "tools/call",
+     "parameter": "list_top_churn_risk"
+    },
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "destinationUrn": "urn:mcp:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-agent-demo-mcp"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "enforcedGatewaySecurityPolicy": {
+    "requestWasTlsIntercepted": true,
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "serverNameIndication": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "hostname": "agent-demo-mcp-123456789012.us-central1.run.app"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp",
+   "requestSize": "3526",
+   "status": 200,
+   "responseSize": "881",
+   "userAgent": "python-httpx/0.28.1",
+   "remoteIp": "7.0.2.2:1029",
+   "serverIp": "34.143.77.2:443",
+   "latency": "1.252813s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "resource_container": "123456789012",
+    "gateway_name": "agent-demo-egress-gw",
+    "location": "us-central1",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc"
+   }
+  },
+  "timestamp": "2026-11-26T21:05:41.980426Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "trace": "5c380538565aa43a038f14984491c3cc",
+  "receiveTimestamp": "2026-11-26T21:05:48.761022129Z",
+  "spanId": "f9841fc6e5f622aa",
+  "traceSampled": true
+ }
+]

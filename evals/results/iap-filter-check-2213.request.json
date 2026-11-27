@@ -1,0 +1,8 @@
+{
+ "resourceNames": [
+  "projects/your-project-id"
+ ],
+ "filter": "((logName=\"projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests\" AND resource.type=\"networkservices.googleapis.com/Gateway\" AND resource.labels.gateway_name=(\"agent-demo-egress-gw\" OR \"agent-demo-ingress-gw\")) OR (logName=\"projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access\" AND protoPayload.serviceName=\"iap.googleapis.com\" AND protoPayload.methodName=\"GatekeeperAuthorizer.AuthorizeUser\" AND labels.\"iap.googleapis.com/audited_resource_type\"=\"agentregistry.googleapis.com/McpServer\" AND protoPayload.authenticationInfo.principalSubject=\"principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789\")) AND timestamp>=\"2026-11-26T22:13:00.000Z\" AND timestamp<=\"2026-11-26T22:14:00.000Z\"",
+ "orderBy": "timestamp asc",
+ "pageSize": 1000
+}

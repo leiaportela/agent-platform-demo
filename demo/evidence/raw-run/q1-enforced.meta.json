@@ -1,0 +1,11 @@
+{
+ "label": "q1-enforced",
+ "prompt": "What did last night's pipeline run produce, and how good are the models?",
+ "engine": "projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+ "t0_utc": "2026-11-26T21:04:17Z",
+ "session_id": "6075183651954360320",
+ "status": 200,
+ "events": 3,
+ "first_event_s": 5.65,
+ "total_s": 16.06
+}

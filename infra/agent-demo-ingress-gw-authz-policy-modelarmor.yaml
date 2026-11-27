@@ -1,0 +1,10 @@
+name: agent-demo-ingress-gw-authz-policy-modelarmor
+target:
+  resources:
+    - "projects/your-project-id/locations/us-central1/agentGateways/agent-demo-ingress-gw"
+policyProfile: CONTENT_AUTHZ
+action: CUSTOM
+customProvider:
+  authzExtension:
+    resources:
+      - "projects/your-project-id/locations/us-central1/authzExtensions/agent-demo-ingress-gw-authz-modelarmor"

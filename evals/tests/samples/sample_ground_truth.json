@@ -1,0 +1,97 @@
+{
+  "computed_at": "2026-11-26T20:59:14+00:00",
+  "source": "your-project-id.vertex_demo_dashboard",
+  "latest_run": {
+    "run_id": "vertex-demo-e2e-4-20261126",
+    "started_at": "2026-11-26T07:41:51.236751+00:00",
+    "data_as_of": "2026-11-26"
+  },
+  "churn": {
+    "auc_pr": 0.22698784,
+    "positive_rate": 0.06869983948635634,
+    "auc_roc": 0.76075584,
+    "precision": 0.25301206,
+    "recall": 0.34345794,
+    "threshold": 0.155,
+    "top5_user_ids": [
+      "9044",
+      "9862",
+      "37061",
+      "72577",
+      "10383"
+    ],
+    "top5_scores": [
+      0.9821125864982605,
+      0.9820348620414734,
+      0.9817947745323181,
+      0.9817798137664795,
+      0.9817420840263367
+    ],
+    "top30_score_min": 0.9812036752700806,
+    "top30_score_max": 0.9821125864982605,
+    "top30_score_spread": 0.0009089112281799316,
+    "top_drivers": [
+      "tenure_days",
+      "frequency",
+      "recency_days"
+    ]
+  },
+  "clv": {
+    "rmse": 43.10573705212722,
+    "baseline_rmse": 43.93161485933627,
+    "r2": 0.03713250367897458,
+    "mae": 17.195705991588525
+  },
+  "demand": {
+    "mape_mean": 39.17417339932594,
+    "coverage_mean": 0.4958791208791208,
+    "forecast_start": "2026-11-26",
+    "horizon_days": 14,
+    "top5_categories_14d": [
+      "Tops & Tees",
+      "Jeans",
+      "Fashion Hoodies & Sweatshirts",
+      "Sleep & Lounge",
+      "Intimates"
+    ],
+    "top5_units_14d": [
+      278.5,
+      262.8,
+      254.8,
+      252.5,
+      252.4
+    ],
+    "top5_coverage": [
+      0.42857142857142866,
+      0.5357142857142855,
+      0.42857142857142866,
+      0.6428571428571427,
+      0.5357142857142857
+    ],
+    "top5_mape": [
+      28.962556313169603,
+      22.534276477112357,
+      25.815683558275975,
+      24.539655072221116,
+      21.830673206492456
+    ],
+    "top5_max_coverage": 0.6428571428571427
+  },
+  "models": {
+    "churn": {
+      "training_method": "AutoML Tabular",
+      "headline_metric_name": "AUC-PR (reorders class)",
+      "headline_metric_value": 0.22698784
+    },
+    "demand": {
+      "training_method": "BigQuery ML ARIMA_PLUS",
+      "headline_metric_name": "MAPE",
+      "headline_metric_value": 39.17417339932594
+    },
+    "clv": {
+      "training_method": "Custom XGBoost + hyperparameter tuning",
+      "headline_metric_name": "RMSE",
+      "headline_metric_value": 43.10573705212722
+    }
+  }
+}

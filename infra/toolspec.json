@@ -1,0 +1,124 @@
+{
+ "tools": [
+  {
+   "name": "get_latest_run",
+   "description": "Latest successful Vertex AI Pipelines run: id, start/end time, data date, console link, and\nthe duration of each pipeline step.",
+   "inputSchema": {
+    "properties": {},
+    "type": "object",
+    "additionalProperties": false
+   },
+   "annotations": {
+    "readOnlyHint": true
+   }
+  },
+  {
+   "name": "get_model_summary",
+   "description": "Training method, headline metric and all evaluation metrics of one model from the latest run.",
+   "inputSchema": {
+    "properties": {
+     "model": {
+      "type": "string",
+      "description": "one of \"churn\" (AutoML Tabular classifier), \"clv\" (custom XGBoost regressor with\nhyperparameter tuning, 180-day customer lifetime value) or \"demand\" (BigQuery ML\nARIMA_PLUS daily units forecast per product category)."
+     }
+    },
+    "required": [
+     "model"
+    ],
+    "type": "object",
+    "additionalProperties": false
+   },
+   "annotations": {
+    "readOnlyHint": true
+   }
+  },
+  {
+   "name": "list_top_churn_risk",
+   "description": "Customers with the highest predicted churn probability in the latest run (at most 30), with\nthe three features that drove each score.\n\nchurn_score is the predicted probability that the customer has churned (no order in the last\n90 days). Customers are identified by user_id only.",
+   "inputSchema": {
+    "properties": {
+     "limit": {
+      "default": 10,
+      "type": "integer"
+     }
+    },
+    "type": "object",
+    "additionalProperties": false
+   },
+   "annotations": {
+    "readOnlyHint": true
+   }
+  },
+  {
+   "name": "get_churn_drivers",
+   "description": "Global feature importance of the churn model, plus precision/recall at the decision threshold\nclosest to `threshold` (from the test-set confusion matrix).",
+   "inputSchema": {
+    "properties": {
+     "threshold": {
+      "default": 0.5,
+      "type": "number"
+     }
+    },
+    "type": "object",
+    "additionalProperties": false
+   },
+   "annotations": {
+    "readOnlyHint": true
+   }
+  },
+  {
+   "name": "get_clv_segments",
+   "description": "CLV (180-day lifetime value) model quality by customer segment, and predicted vs actual\nrevenue by predicted-value decile (decile 1 = highest predicted value) with lift.",
+   "inputSchema": {
+    "properties": {},
+    "type": "object",
+    "additionalProperties": false
+   },
+   "annotations": {
+    "readOnlyHint": true
+   }
+  },
+  {
+   "name": "get_demand_outlook",
+   "description": "Forecast units per product category for the next `days` days (max 30) from the latest run,\nwith the 90% band, plus each category's holdout accuracy (MAPE and band coverage).",
+   "inputSchema": {
+    "properties": {
+     "days": {
+      "default": 14,
+      "type": "integer",
+      "description": "forecast horizon in days, starting at the run's data date."
+     },
+     "category": {
+      "default": "",
+      "type": "string",
+      "description": "optional exact category name (e.g. \"Swim\"); empty = top 10 categories by units."
+     }
+    },
+    "type": "object",
+    "additionalProperties": false
+   },
+   "annotations": {
+    "readOnlyHint": true
+   }
+  },
+  {
+   "name": "get_customer_contact",
+   "description": "Name, email and postal address of one customer, for outreach.\n\nReads directly identifying personal data from the source system\n(bigquery-public-data.thelook_ecommerce.users).",
+   "inputSchema": {
+    "properties": {
+     "user_id": {
+      "type": "integer"
+     }
+    },
+    "required": [
+     "user_id"
+    ],
+    "type": "object",
+    "additionalProperties": false
+   },
+   "annotations": {
+    "readOnlyHint": true
+   }
+  }
+ ]
+}

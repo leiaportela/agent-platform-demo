@@ -1,0 +1,6 @@
+name: agent-demo-egress-gw-authz-iap-enforced
+service: iap.googleapis.com
+failOpen: false
+timeout: 1s
+metadata:
+  iapPolicyVersion: "V1"

@@ -1,0 +1,4 @@
+{
+ "status": 403,
+ "body": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Model Armor: Prompt violates content security configurations\",\n    \"status\": \"PERMISSION_DENIED\"\n  }\n}\n"
+}

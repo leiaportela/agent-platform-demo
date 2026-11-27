@@ -1,0 +1,1579 @@
+[
+ {
+  "insertId": "1m9vwkmf1air03",
+  "jsonPayload": {
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com",
+   "enforcedGatewaySecurityPolicy": {
+    "matchedRules": [
+     {
+      "name": "default_denied",
+      "action": "ALLOWED"
+     }
+    ],
+    "hostname": "us-central1-aiplatform.googleapis.com",
+    "requestWasTlsIntercepted": true,
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com"
+   },
+   "mtls": {
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertPresent": "true",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z"
+   },
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ]
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "agentGatewayInfo": {
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001",
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions",
+   "requestSize": "2143",
+   "status": 200,
+   "responseSize": "605",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1025",
+   "serverIp": "172.217.117.4:443",
+   "latency": "0.248097s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "resource_container": "123456789012",
+    "location": "us-central1",
+    "gateway_name": "agent-demo-egress-gw"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:18.206523Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.770269789Z"
+ },
+ {
+  "insertId": "1m9vwkmf1air04",
+  "jsonPayload": {
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "agentGatewayInfo": {
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001",
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform"
+   },
+   "mtls": {
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertPresent": "true",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false"
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "hostname": "us-central1-aiplatform.googleapis.com",
+    "requestWasTlsIntercepted": true,
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com"
+   },
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com"
+  },
+  "httpRequest": {
+   "requestMethod": "GET",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789/sessions/6479381718510862336",
+   "requestSize": "2114",
+   "status": 200,
+   "responseSize": "472",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1025",
+   "serverIp": "172.217.117.4:443",
+   "latency": "0.202330s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "resource_container": "123456789012",
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "location": "us-central1",
+    "gateway_name": "agent-demo-egress-gw",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:18.462742Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.770269789Z"
+ },
+ {
+  "insertId": "3np69rf3b4fvp",
+  "jsonPayload": {
+   "enforcedGatewaySecurityPolicy": {
+    "hostname": "us-central1-aiplatform.googleapis.com",
+    "requestWasTlsIntercepted": true,
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com"
+   },
+   "mtls": {
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false",
+    "clientCertPresent": "true",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1"
+   },
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ]
+   },
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com",
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "GET",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions/6479381718510862336",
+   "requestSize": "2123",
+   "status": 200,
+   "responseSize": "472",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1024",
+   "serverIp": "172.217.114.4:443",
+   "latency": "0.263947s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "resource_container": "123456789012",
+    "gateway_name": "agent-demo-egress-gw",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:19.282940Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:21.867856356Z"
+ },
+ {
+  "insertId": "4378831e-687e-415b-8b37-2cb5d24580e3",
+  "jsonPayload": {
+   "filterConfig": {},
+   "@type": "type.googleapis.com/google.cloud.modelarmor.logging.v1.SanitizeOperationLogEntry",
+   "operationType": "SANITIZE_USER_PROMPT",
+   "sanitizationInput": {
+    "byteItem": {
+     "byteData": "V2hhdCBkaWQgbGFzdCBuaWdodCdzIHBpcGVsaW5lIHJ1biBwcm9kdWNlLCBhbmQgaG93IGdvb2QgYXJlIHRoZSBtb2RlbHM/",
+     "byteDataType": "PLAINTEXT_UTF8"
+    }
+   },
+   "sanitizationResult": {
+    "filterMatchState": "NO_MATCH_FOUND",
+    "sanitizationVerdictReason": "The prompt did not violate any safety settings.",
+    "invocationResult": "SUCCESS",
+    "sanitizationMetadata": {
+     "filterVersionConfig": {
+      "filterVersionAlias": "FILTER_VERSION_ALIAS_STABLE",
+      "releaseDate": {
+       "year": 2026,
+       "day": 25,
+       "month": 5
+      },
+      "projectedDeprecationDate": {},
+      "filterVersion": "v3"
+     }
+    },
+    "sanitizationVerdict": "MODEL_ARMOR_SANITIZATION_VERDICT_ALLOW",
+    "filterResults": {
+     "csam": {
+      "csamFilterFilterResult": {
+       "executionState": "EXECUTION_SUCCESS",
+       "matchState": "NO_MATCH_FOUND"
+      }
+     },
+     "sdp": {
+      "sdpFilterResult": {
+       "inspectResult": {
+        "matchState": "NO_MATCH_FOUND",
+        "executionState": "EXECUTION_SUCCESS"
+       }
+      }
+     },
+     "pi_and_jailbreak": {
+      "piAndJailbreakFilterResult": {
+       "matchState": "NO_MATCH_FOUND",
+       "executionState": "EXECUTION_SUCCESS"
+      }
+     },
+     "malicious_uris": {
+      "maliciousUriFilterResult": {
+       "matchState": "NO_MATCH_FOUND",
+       "executionState": "EXECUTION_SUCCESS"
+      }
+     },
+     "rai": {
+      "raiFilterResult": {
+       "raiFilterTypeResults": {
+        "sexually_explicit": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "hate_speech": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "harassment": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "dangerous": {
+         "matchState": "NO_MATCH_FOUND"
+        }
+       },
+       "matchState": "NO_MATCH_FOUND",
+       "executionState": "EXECUTION_SUCCESS"
+      }
+     }
+    }
+   }
+  },
+  "resource": {
+   "type": "modelarmor.googleapis.com/SanitizeOperation",
+   "labels": {
+    "template_id": "agent-demo-armor",
+    "location": "us-central1",
+    "resource_container": "projects/123456789012"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:19.401100130Z",
+  "severity": "INFO",
+  "labels": {
+   "modelarmor.googleapis.com/client_correlation_id": "14683294536216392746",
+   "modelarmor.googleapis.com/operation_type": "SANITIZE_USER_PROMPT",
+   "modelarmor.googleapis.com/api_version": "",
+   "modelarmor.googleapis.com/client_name": "AGENT_GATEWAY"
+  },
+  "logName": "projects/your-project-id/logs/modelarmor.googleapis.com%2Fsanitize_operations",
+  "trace": "fba067a7b42e385508a6c1188733706c",
+  "receiveTimestamp": "2026-11-26T21:00:19.401100130Z",
+  "spanId": "9cea62e5ab7bd725",
+  "traceSampled": true
+ },
+ {
+  "insertId": "w6v91lf2nizqi",
+  "jsonPayload": {
+   "enforcedGatewaySecurityPolicy": {
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "requestWasTlsIntercepted": true,
+    "hostname": "us-central1-aiplatform.googleapis.com",
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "mtls": {
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertError": "client_cert_validation_not_performed"
+   },
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001"
+   },
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com"
+  },
+  "httpRequest": {
+   "requestMethod": "GET",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions/6479381718510862336/events",
+   "requestSize": "2130",
+   "status": 200,
+   "responseSize": "297",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1030",
+   "serverIp": "172.217.117.4:443",
+   "latency": "0.223381s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_name": "agent-demo-egress-gw",
+    "location": "us-central1",
+    "resource_container": "123456789012"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:19.511338Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.423028294Z"
+ },
+ {
+  "insertId": "cf0d73a7-656c-4988-b43f-8806e25ffd3c",
+  "jsonPayload": {
+   "filterConfig": {},
+   "@type": "type.googleapis.com/google.cloud.modelarmor.logging.v1.SanitizeOperationLogEntry",
+   "sanitizationInput": {
+    "byteItem": {
+     "byteData": "W3sidHlwZSI6InRleHQiLCJ0ZXh0Ijoie1xuICBcIm91dHB1dFwiOiB7XG4gICAgXCJsYXN0X3VwZGF0ZV90aW1lXCI6IDE3OTU3MjY4MTguNDMxNjQyMSxcbiAgICBcImFwcF9uYW1lXCI6IFwiMTIzNDU2Nzg5MDEyMzQ1Njc4OVwiLFxuICAgIFwiZXZlbnRzXCI6IFtdLFxuICAgIFwic3RhdGVcIjoge30sXG4gICAgXCJpZFwiOiBcIjY0NzkzODE3MTg1MTA4NjIzMzZcIixcbiAgICBcInVzZXJfaWRcIjogXCJzcGlrZVwiXG4gIH1cbn1cbiJ9XQ==",
+     "byteDataType": "PLAINTEXT_UTF8"
+    }
+   },
+   "operationType": "SANITIZE_MODEL_RESPONSE",
+   "sanitizationResult": {
+    "sanitizationVerdict": "MODEL_ARMOR_SANITIZATION_VERDICT_ALLOW",
+    "sanitizationMetadata": {
+     "filterVersionConfig": {
+      "filterVersion": "v3",
+      "filterVersionAlias": "FILTER_VERSION_ALIAS_STABLE",
+      "releaseDate": {
+       "day": 25,
+       "month": 5,
+       "year": 2026
+      },
+      "projectedDeprecationDate": {}
+     }
+    },
+    "sanitizationVerdictReason": "The model response did not violate any safety settings.",
+    "filterMatchState": "NO_MATCH_FOUND",
+    "filterResults": {
+     "sdp": {
+      "sdpFilterResult": {
+       "inspectResult": {
+        "matchState": "NO_MATCH_FOUND",
+        "executionState": "EXECUTION_SUCCESS"
+       }
+      }
+     },
+     "malicious_uris": {
+      "maliciousUriFilterResult": {
+       "executionState": "EXECUTION_SUCCESS",
+       "matchState": "NO_MATCH_FOUND"
+      }
+     },
+     "pi_and_jailbreak": {
+      "piAndJailbreakFilterResult": {
+       "executionState": "EXECUTION_SUCCESS",
+       "matchState": "NO_MATCH_FOUND"
+      }
+     },
+     "csam": {
+      "csamFilterFilterResult": {
+       "executionState": "EXECUTION_SUCCESS",
+       "matchState": "NO_MATCH_FOUND"
+      }
+     },
+     "rai": {
+      "raiFilterResult": {
+       "matchState": "NO_MATCH_FOUND",
+       "executionState": "EXECUTION_SUCCESS",
+       "raiFilterTypeResults": {
+        "sexually_explicit": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "harassment": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "dangerous": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "hate_speech": {
+         "matchState": "NO_MATCH_FOUND"
+        }
+       }
+      }
+     }
+    },
+    "invocationResult": "SUCCESS"
+   }
+  },
+  "resource": {
+   "type": "modelarmor.googleapis.com/SanitizeOperation",
+   "labels": {
+    "template_id": "agent-demo-armor",
+    "location": "us-central1",
+    "resource_container": "projects/123456789012"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:19.702326816Z",
+  "severity": "INFO",
+  "labels": {
+   "modelarmor.googleapis.com/client_correlation_id": "8306958782537141291",
+   "modelarmor.googleapis.com/operation_type": "SANITIZE_MODEL_RESPONSE",
+   "modelarmor.googleapis.com/client_name": "AGENT_GATEWAY",
+   "modelarmor.googleapis.com/api_version": ""
+  },
+  "logName": "projects/your-project-id/logs/modelarmor.googleapis.com%2Fsanitize_operations",
+  "trace": "2fabf872c58c35cc0b13b60ba30021c7",
+  "receiveTimestamp": "2026-11-26T21:00:19.702326816Z",
+  "spanId": "800b3b1824825bf5",
+  "traceSampled": true
+ },
+ {
+  "insertId": "3np69rf3b4fvq",
+  "jsonPayload": {
+   "mtls": {
+    "clientCertChainVerified": "false",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertPresent": "true",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com",
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ]
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com",
+    "requestWasTlsIntercepted": true,
+    "matchedRules": [
+     {
+      "name": "default_denied",
+      "action": "ALLOWED"
+     }
+    ],
+    "hostname": "us-central1-aiplatform.googleapis.com"
+   },
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "GET",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions/6479381718510862336",
+   "requestSize": "2123",
+   "status": 200,
+   "responseSize": "472",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1025",
+   "serverIp": "172.217.114.4:443",
+   "latency": "0.201095s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_name": "agent-demo-egress-gw",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "location": "us-central1",
+    "resource_container": "123456789012",
+    "gateway_type": "SECURE_WEB_GATEWAY"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:19.825551Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:21.867856356Z"
+ },
+ {
+  "insertId": "w6v91lf2nizqj",
+  "jsonPayload": {
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com",
+   "enforcedGatewaySecurityPolicy": {
+    "requestWasTlsIntercepted": true,
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com",
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "hostname": "us-central1-aiplatform.googleapis.com"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "mtls": {
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false",
+    "clientCertPresent": "true",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed"
+   },
+   "agentGatewayInfo": {
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001",
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform"
+   },
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ]
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "GET",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions/6479381718510862336/events",
+   "requestSize": "2130",
+   "status": 200,
+   "responseSize": "297",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1029",
+   "serverIp": "172.217.117.4:443",
+   "latency": "0.195656s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_name": "agent-demo-egress-gw",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "resource_container": "123456789012",
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:20.006369Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.423028294Z"
+ },
+ {
+  "insertId": "1m9vwkmf1air05",
+  "jsonPayload": {
+   "agentGatewayInfo": {
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001",
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform"
+   },
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ]
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "mtls": {
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertChainVerified": "false",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertError": "client_cert_validation_not_performed"
+   },
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com",
+   "enforcedGatewaySecurityPolicy": {
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com",
+    "requestWasTlsIntercepted": true,
+    "hostname": "us-central1-aiplatform.googleapis.com",
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ]
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions/6479381718510862336:appendEvent",
+   "requestSize": "2947",
+   "status": 200,
+   "responseSize": "297",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1026",
+   "serverIp": "172.217.117.4:443",
+   "latency": "0.200273s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_name": "agent-demo-egress-gw",
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "resource_container": "123456789012",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:20.285654Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.770269789Z"
+ },
+ {
+  "insertId": "3np69rf3b4fvr",
+  "jsonPayload": {
+   "enforcedGatewaySecurityPolicy": {
+    "requestWasTlsIntercepted": true,
+    "hostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "serverNameIndication": "agent-demo-mcp-123456789012.us-central1.run.app"
+   },
+   "mtls": {
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertChainVerified": "false",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "tlsSniHostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:mcp:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-agent-demo-mcp",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "mcpInfo": {
+     "method": "initialize"
+    }
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp",
+   "requestSize": "3365",
+   "status": 200,
+   "responseSize": "467",
+   "userAgent": "python-httpx/0.28.1",
+   "remoteIp": "7.0.2.2:1026",
+   "serverIp": "34.143.77.2:443",
+   "latency": "0.207576s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_name": "agent-demo-egress-gw",
+    "resource_container": "123456789012",
+    "location": "us-central1",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_type": "SECURE_WEB_GATEWAY"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:20.883003Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "trace": "76be74fe0e2f7eb575178d62ed5dba98",
+  "receiveTimestamp": "2026-11-26T21:00:21.867856356Z",
+  "spanId": "75778589c9d0c2a0",
+  "traceSampled": true
+ },
+ {
+  "insertId": "3np69rf3b4fvs",
+  "jsonPayload": {
+   "tlsSniHostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+   "agentGatewayInfo": {
+    "mcpInfo": {
+     "method": "notifications/initialized"
+    },
+    "destinationUrn": "urn:mcp:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-agent-demo-mcp",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002"
+   },
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ]
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "enforcedGatewaySecurityPolicy": {
+    "hostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "serverNameIndication": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "requestWasTlsIntercepted": true
+   },
+   "mtls": {
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertPresent": "true",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp",
+   "requestSize": "3300",
+   "status": 202,
+   "responseSize": "199",
+   "userAgent": "python-httpx/0.28.1",
+   "remoteIp": "7.0.2.2:1026",
+   "serverIp": "34.143.77.2:443",
+   "latency": "0.126700s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "resource_container": "123456789012",
+    "location": "us-central1",
+    "gateway_name": "agent-demo-egress-gw",
+    "gateway_type": "SECURE_WEB_GATEWAY"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:21.095305Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "trace": "76be74fe0e2f7eb575178d62ed5dba98",
+  "receiveTimestamp": "2026-11-26T21:00:21.867856356Z",
+  "spanId": "531343c0e417d3cb",
+  "traceSampled": true
+ },
+ {
+  "insertId": "1m9vwkmf1air06",
+  "jsonPayload": {
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "serverNameIndication": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "matchedRules": [
+     {
+      "name": "default_denied",
+      "action": "ALLOWED"
+     }
+    ],
+    "hostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "requestWasTlsIntercepted": true
+   },
+   "agentGatewayInfo": {
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "destinationUrn": "urn:mcp:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-agent-demo-mcp",
+    "mcpInfo": {
+     "method": "tools/list"
+    }
+   },
+   "tlsSniHostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "mtls": {
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertChainVerified": "false",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp",
+   "requestSize": "3292",
+   "status": 200,
+   "responseSize": "4058",
+   "userAgent": "python-httpx/0.28.1",
+   "remoteIp": "7.0.2.2:1027",
+   "serverIp": "34.143.79.2:443",
+   "latency": "0.161432s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_name": "agent-demo-egress-gw",
+    "resource_container": "123456789012",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:21.237794Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "trace": "76be74fe0e2f7eb575178d62ed5dba98",
+  "receiveTimestamp": "2026-11-26T21:00:28.770269789Z",
+  "spanId": "098c701a15c6709e",
+  "traceSampled": true
+ },
+ {
+  "insertId": "3np69rf3b4fvt",
+  "jsonPayload": {
+   "enforcedGatewaySecurityPolicy": {
+    "hostname": "telemetry.googleapis.com",
+    "serverNameIndication": "telemetry.googleapis.com",
+    "requestWasTlsIntercepted": true,
+    "matchedRules": [
+     {
+      "name": "default_denied",
+      "action": "ALLOWED"
+     }
+    ]
+   },
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-telemetry",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000003"
+   },
+   "tlsSniHostname": "telemetry.googleapis.com",
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "mtls": {
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertChainVerified": "false",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertError": "client_cert_validation_not_performed"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://telemetry.googleapis.com/v1/traces",
+   "requestSize": "3053",
+   "status": 200,
+   "responseSize": "306",
+   "userAgent": "Vertex-Agent-Engine/2.10.0 OTel-OTLP-Exporter-Python/1.42.1",
+   "remoteIp": "7.0.2.2:1027",
+   "serverIp": "172.217.115.4:443",
+   "latency": "0.294716s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "resource_container": "123456789012",
+    "location": "us-central1",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_name": "agent-demo-egress-gw"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:21.322696Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:21.867856356Z"
+ },
+ {
+  "insertId": "w6v91lf2nizqk",
+  "jsonPayload": {
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ]
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "hostname": "telemetry.googleapis.com",
+    "matchedRules": [
+     {
+      "name": "default_denied",
+      "action": "ALLOWED"
+     }
+    ],
+    "serverNameIndication": "telemetry.googleapis.com",
+    "requestWasTlsIntercepted": true
+   },
+   "agentGatewayInfo": {
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000003",
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-telemetry"
+   },
+   "tlsSniHostname": "telemetry.googleapis.com",
+   "mtls": {
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertChainVerified": "false",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry"
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://telemetry.googleapis.com/v1/logs",
+   "requestSize": "5447",
+   "status": 200,
+   "responseSize": "306",
+   "userAgent": "Vertex-Agent-Engine/2.10.0 OTel-OTLP-Exporter-Python/1.42.1",
+   "remoteIp": "7.0.2.2:1028",
+   "serverIp": "172.217.119.4:443",
+   "latency": "0.226164s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "resource_container": "123456789012",
+    "location": "us-central1",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_name": "agent-demo-egress-gw"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:22.391533Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.423028294Z"
+ },
+ {
+  "insertId": "1m9vwkmf1air08",
+  "jsonPayload": {
+   "mtls": {
+    "clientCertPresent": "true",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertError": "client_cert_validation_not_performed"
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "hostname": "240.0.0.2:443",
+    "matchedRules": [
+     {
+      "name": "default_denied"
+     }
+    ]
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "agentGatewayInfo": {}
+  },
+  "httpRequest": {
+   "requestMethod": "CONNECT",
+   "requestSize": "9249",
+   "status": 200,
+   "responseSize": "3469",
+   "remoteIp": "7.0.2.2:1029",
+   "latency": "0.189387s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "resource_container": "123456789012",
+    "location": "us-central1",
+    "gateway_name": "agent-demo-egress-gw",
+    "gateway_type": "SECURE_WEB_GATEWAY"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:24.012167Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.770269789Z"
+ },
+ {
+  "insertId": "1m9vwkmf1air07",
+  "jsonPayload": {
+   "mtls": {
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertChainVerified": "false"
+   },
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-us-central1-aiplatform",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "tlsSniHostname": "us-central1-aiplatform.googleapis.com",
+   "enforcedGatewaySecurityPolicy": {
+    "serverNameIndication": "us-central1-aiplatform.googleapis.com",
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "hostname": "us-central1-aiplatform.googleapis.com",
+    "requestWasTlsIntercepted": true
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions/6479381718510862336:appendEvent",
+   "requestSize": "5669",
+   "status": 200,
+   "responseSize": "297",
+   "userAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+   "remoteIp": "7.0.2.2:1027",
+   "serverIp": "172.217.117.4:443",
+   "latency": "0.181914s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "resource_container": "123456789012",
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "gateway_name": "agent-demo-egress-gw",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:24.017433Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.770269789Z"
+ },
+ {
+  "insertId": "l5hrgvf2sqgao",
+  "jsonPayload": {
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap",
+      "result": "ALLOWED"
+     }
+    ]
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "serverNameIndication": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "matchedRules": [
+     {
+      "name": "default_denied",
+      "action": "ALLOWED"
+     }
+    ],
+    "hostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "requestWasTlsIntercepted": true
+   },
+   "mtls": {
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertChainVerified": "false",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1"
+   },
+   "tlsSniHostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+   "agentGatewayInfo": {
+    "mcpInfo": {
+     "method": "tools/call",
+     "parameter": "get_model_summary"
+    },
+    "destinationUrn": "urn:mcp:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-agent-demo-mcp",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry"
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp",
+   "requestSize": "3530",
+   "status": 200,
+   "responseSize": "1728",
+   "userAgent": "python-httpx/0.28.1",
+   "remoteIp": "7.0.2.2:1027",
+   "serverIp": "34.143.77.2:443",
+   "latency": "1.728918s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "location": "us-central1",
+    "resource_container": "123456789012",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_name": "agent-demo-egress-gw"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:24.438724Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "trace": "76be74fe0e2f7eb575178d62ed5dba98",
+  "receiveTimestamp": "2026-11-26T21:00:32.313345178Z",
+  "spanId": "c4ad0bd17eed1331",
+  "traceSampled": true
+ },
+ {
+  "insertId": "l5hrgvf2sqgap",
+  "jsonPayload": {
+   "agentGatewayInfo": {
+    "mcpInfo": {
+     "method": "tools/call",
+     "parameter": "get_model_summary"
+    },
+    "destinationUrn": "urn:mcp:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-agent-demo-mcp",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002"
+   },
+   "authzPolicyInfo": {
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ],
+    "result": "ALLOWED"
+   },
+   "tlsSniHostname": "agent-demo-mcp-123456789012.us-central1.run.app",
+   "mtls": {
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertPresent": "true",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertChainVerified": "false",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "enforcedGatewaySecurityPolicy": {
+    "serverNameIndication": "agent-demo-mcp-123456789012.us-central1.run.app",
+    "requestWasTlsIntercepted": true,
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "hostname": "agent-demo-mcp-123456789012.us-central1.run.app"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp",
+   "requestSize": "3531",
+   "status": 200,
+   "responseSize": "1492",
+   "userAgent": "python-httpx/0.28.1",
+   "remoteIp": "7.0.2.2:1027",
+   "serverIp": "34.143.77.2:443",
+   "latency": "2.171427s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_name": "agent-demo-egress-gw",
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "resource_container": "123456789012",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:24.475257Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "trace": "76be74fe0e2f7eb575178d62ed5dba98",
+  "receiveTimestamp": "2026-11-26T21:00:32.313345178Z",
+  "spanId": "471dcdf0c2cc8e3d",
+  "traceSampled": true
+ },
+ {
+  "insertId": "w6v91lf2nizql",
+  "jsonPayload": {
+   "agentGatewayInfo": {
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000003",
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-telemetry"
+   },
+   "tlsSniHostname": "telemetry.googleapis.com",
+   "mtls": {
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertChainVerified": "false",
+    "clientCertPresent": "true",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z"
+   },
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ]
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "enforcedGatewaySecurityPolicy": {
+    "matchedRules": [
+     {
+      "action": "ALLOWED",
+      "name": "default_denied"
+     }
+    ],
+    "requestWasTlsIntercepted": true,
+    "serverNameIndication": "telemetry.googleapis.com",
+    "hostname": "telemetry.googleapis.com"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://telemetry.googleapis.com/v1/logs",
+   "requestSize": "5519",
+   "status": 200,
+   "responseSize": "306",
+   "userAgent": "Vertex-Agent-Engine/2.10.0 OTel-OTLP-Exporter-Python/1.42.1",
+   "remoteIp": "7.0.2.2:1028",
+   "serverIp": "172.217.119.4:443",
+   "latency": "0.288898s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "resource_container": "123456789012",
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "location": "us-central1",
+    "gateway_name": "agent-demo-egress-gw",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:24.621774Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.423028294Z"
+ },
+ {
+  "insertId": "l5hrgvf2sqgaq",
+  "jsonPayload": {
+   "agentGatewayInfo": {},
+   "enforcedGatewaySecurityPolicy": {
+    "hostname": "240.0.0.2:443",
+    "matchedRules": [
+     {
+      "name": "default_denied"
+     }
+    ]
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry",
+   "mtls": {
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertChainVerified": "false",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertPresent": "true",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z"
+   }
+  },
+  "httpRequest": {
+   "requestMethod": "CONNECT",
+   "requestSize": "31041",
+   "status": 200,
+   "responseSize": "3469",
+   "remoteIp": "7.0.2.2:1030",
+   "latency": "0.187066s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "resource_container": "123456789012",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "gateway_name": "agent-demo-egress-gw",
+    "location": "us-central1",
+    "gateway_type": "SECURE_WEB_GATEWAY"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:26.690238Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:32.313345178Z"
+ },
+ {
+  "insertId": "w6v91lf2nizqm",
+  "jsonPayload": {
+   "agentGatewayInfo": {
+    "destinationUrn": "urn:endpoint:projects-123456789012:projects:123456789012:locations:us-central1:agentregistry:services:us-central1-telemetry",
+    "agentRegistryResource": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000003"
+   },
+   "authzPolicyInfo": {
+    "result": "ALLOWED",
+    "policies": [
+     {
+      "result": "ALLOWED",
+      "name": "projects/123456789012/locations/us-central1/authzPolicies/agent-demo-egress-gw-authz-policy-iap"
+     }
+    ]
+   },
+   "mtls": {
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertPresent": "true",
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertChainVerified": "false",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed"
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "requestWasTlsIntercepted": true,
+    "serverNameIndication": "telemetry.googleapis.com",
+    "hostname": "telemetry.googleapis.com",
+    "matchedRules": [
+     {
+      "name": "default_denied",
+      "action": "ALLOWED"
+     }
+    ]
+   },
+   "tlsSniHostname": "telemetry.googleapis.com",
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry"
+  },
+  "httpRequest": {
+   "requestMethod": "POST",
+   "requestUrl": "https://telemetry.googleapis.com/v1/logs",
+   "requestSize": "21418",
+   "status": 200,
+   "responseSize": "306",
+   "userAgent": "Vertex-Agent-Engine/2.10.0 OTel-OTLP-Exporter-Python/1.42.1",
+   "remoteIp": "7.0.2.2:1028",
+   "serverIp": "172.217.119.4:443",
+   "latency": "0.229833s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "gateway_type": "SECURE_WEB_GATEWAY",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "resource_container": "123456789012",
+    "location": "us-central1",
+    "gateway_name": "agent-demo-egress-gw"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:26.917673Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:28.423028294Z"
+ },
+ {
+  "insertId": "1harkvcf2vgbzs",
+  "jsonPayload": {
+   "agentGatewayInfo": {},
+   "mtls": {
+    "clientCertValidEndTime": "1970-01-01T00:00:00Z",
+    "clientCertSha256Fingerprint": "REDACTED-CERT-FINGERPRINT-1",
+    "clientCertChainVerified": "false",
+    "clientCertValidStartTime": "1970-01-01T00:00:00Z",
+    "clientCertError": "client_cert_validation_not_performed",
+    "clientCertPresent": "true"
+   },
+   "enforcedGatewaySecurityPolicy": {
+    "matchedRules": [
+     {
+      "name": "default_denied"
+     }
+    ],
+    "hostname": "240.0.0.2:443"
+   },
+   "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry"
+  },
+  "httpRequest": {
+   "requestMethod": "CONNECT",
+   "requestSize": "13501",
+   "status": 200,
+   "responseSize": "3469",
+   "remoteIp": "7.0.2.2:1027",
+   "latency": "0.235224s",
+   "protocol": "HTTP/1.1"
+  },
+  "resource": {
+   "type": "networkservices.googleapis.com/Gateway",
+   "labels": {
+    "location": "us-central1",
+    "network_name": "projects/tenant-project-tp/global/networks/tenant-vpc",
+    "resource_container": "123456789012",
+    "gateway_name": "agent-demo-egress-gw",
+    "gateway_type": "SECURE_WEB_GATEWAY"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:33.633388Z",
+  "severity": "INFO",
+  "logName": "projects/your-project-id/logs/networkservices.googleapis.com%2Fgateway_requests",
+  "receiveTimestamp": "2026-11-26T21:00:38.664403991Z"
+ },
+ {
+  "insertId": "748a95b2-b17e-41e6-a6a8-4471b9d9b920",
+  "jsonPayload": {
+   "sanitizationResult": {
+    "filterResults": {
+     "csam": {
+      "csamFilterFilterResult": {
+       "executionState": "EXECUTION_SUCCESS",
+       "matchState": "NO_MATCH_FOUND"
+      }
+     },
+     "sdp": {
+      "sdpFilterResult": {
+       "inspectResult": {
+        "executionState": "EXECUTION_SUCCESS",
+        "matchState": "NO_MATCH_FOUND"
+       }
+      }
+     },
+     "rai": {
+      "raiFilterResult": {
+       "matchState": "NO_MATCH_FOUND",
+       "raiFilterTypeResults": {
+        "harassment": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "dangerous": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "sexually_explicit": {
+         "matchState": "NO_MATCH_FOUND"
+        },
+        "hate_speech": {
+         "matchState": "NO_MATCH_FOUND"
+        }
+       },
+       "executionState": "EXECUTION_SUCCESS"
+      }
+     },
+     "malicious_uris": {
+      "maliciousUriFilterResult": {
+       "matchState": "NO_MATCH_FOUND",
+       "executionState": "EXECUTION_SUCCESS"
+      }
+     },
+     "pi_and_jailbreak": {
+      "piAndJailbreakFilterResult": {
+       "executionState": "EXECUTION_SUCCESS",
+       "matchState": "NO_MATCH_FOUND"
+      }
+     }
+    },
+    "invocationResult": "SUCCESS",
+    "sanitizationVerdict": "MODEL_ARMOR_SANITIZATION_VERDICT_ALLOW",
+    "sanitizationMetadata": {
+     "filterVersionConfig": {
+      "filterVersion": "v3",
+      "filterVersionAlias": "FILTER_VERSION_ALIAS_STABLE",
+      "releaseDate": {
+       "year": 2026,
+       "day": 25,
+       "month": 5
+      },
+      "projectedDeprecationDate": {}
+     }
+    },
+    "filterMatchState": "NO_MATCH_FOUND",
+    "sanitizationVerdictReason": "The model response did not violate any safety settings."
+   },
+   "operationType": "SANITIZE_MODEL_RESPONSE",
+   "sanitizationInput": {
+    "byteItem": {
+     "byteDataType": "PLAINTEXT_UTF8",
+     "byteData": "VGhlIGxhdGVzdCBwaXBlbGluZSBydW4gKCoqdmVydGV4LWRlbW8tZTJlLTQtMjAyNjExMjYqKiwgZGF0YSBhcyBvZiAyMDI2LTExLTI2KSBjb21wbGV0ZWQgc3VjY2Vzc2Z1bGx5IGFuZCBwcm9kdWNlZCAzMC1kYXkgY2F0ZWdvcnkgZGVtYW5kIGZvcmVjYXN0cywgMTgwLWRheSBDTFYgcHJlZGljdGlvbnMsIGFuZCBjdXN0b21lciBjaHVybiByaXNrIHNjb3JlcyB3aXRoIGZlYXR1cmUgYXR0cmlidXRpb25zLgoKKipNb2RlbCBRdWFsaXR5IFN1bW1hcnk6KioKCiogKipDaHVybiAoQXV0b01MIFRhYnVsYXIpOioqICoqRGVjZW50IGxpZnQuKiogQWNoaWV2ZWQgYW4gKipBVUMtUFIgb2YgMC4yMjcqKiBmb3IgdGhlIHJlb3JkZXJzIGNsYXNzIGFnYWluc3QgYSBiYXNlbGluZSBwb3NpdGl2ZSByYXRlIG9mICoqNi45JSoqIChBVUMtUk9DOiAwLjc2MSkuIEl0IG1lYW5pbmdmdWxseSBzZXBhcmF0ZXMgY2h1cm4gcmlza3MgZnJvbSByZXBlYXQgYnV5ZXJzLgoqICoqQ0xWIChDdXN0b20gWEdCb29zdCk6KiogKipXZWFrIHByZWRpY3RpdmUgcG93ZXIuKiogQWNoaWV2ZWQgYW4gKipSTVNFIG9mIDQzLjExKiogdnMuIGEgYmFzZWxpbmUgUk1TRSBvZiAqKjQzLjkzKiosIHdpdGggYW4gKiokUl4yJCBvZiAwLjAzNyoqICgzLjclKS4gSXQgYmFyZWx5IG91dHBlcmZvcm1zIHByZWRpY3RpbmcgdGhlIG1lYW4sIHNvIGluZGl2aWR1YWwgZG9sbGFyIHNwZW5kIGVzdGltYXRlcyBjYXJyeSBoaWdoIHVuY2VydGFpbnR5LgoqICoqRGVtYW5kIChCaWdRdWVyeSBNTCBBUklNQV9QTFVTKToqKiAqKkhpZ2ggZXJyb3IgYW5kIG5hcnJvdyBiYW5kcy4qKiBBY3Jvc3MgMjYgcHJvZHVjdCBjYXRlZ29yaWVzLCB0aGUgaG9sZG91dCAqKk1BUEUgYXZlcmFnZWQgMzkuMiUqKiwgYW5kIDkwJSBwcmVkaWN0aW9uIGludGVydmFsICoqY292ZXJhZ2Ugd2FzIG9ubHkgNDkuNiUqKiAod2VsbCBiZWxvdyB0aGUgdGFyZ2V0IDkwJSkuIFRoZSBtb2RlbCdzIHVuY2VydGFpbnR5IGJhbmRzIGFyZSBzdWJzdGFudGlhbGx5IHRvbyBuYXJyb3cgZm9yIHJlbGlhYmxlIGludmVudG9yeSBidWZmZXIgcGxhbm5pbmcu"
+    }
+   },
+   "filterConfig": {},
+   "@type": "type.googleapis.com/google.cloud.modelarmor.logging.v1.SanitizeOperationLogEntry"
+  },
+  "resource": {
+   "type": "modelarmor.googleapis.com/SanitizeOperation",
+   "labels": {
+    "template_id": "agent-demo-armor",
+    "resource_container": "projects/123456789012",
+    "location": "us-central1"
+   }
+  },
+  "timestamp": "2026-11-26T21:00:34.699828617Z",
+  "severity": "INFO",
+  "labels": {
+   "modelarmor.googleapis.com/operation_type": "SANITIZE_MODEL_RESPONSE",
+   "modelarmor.googleapis.com/client_name": "AGENT_GATEWAY",
+   "modelarmor.googleapis.com/api_version": "",
+   "modelarmor.googleapis.com/client_correlation_id": "14683294536216392746"
+  },
+  "logName": "projects/your-project-id/logs/modelarmor.googleapis.com%2Fsanitize_operations",
+  "trace": "b9fae9b023845da0351c20a229b5f183",
+  "receiveTimestamp": "2026-11-26T21:00:34.699828617Z",
+  "spanId": "d57ced1a9f9fae87"
+ }
+]

@@ -1,0 +1,19 @@
+# Google API hosts the agent (ADK + Agent Runtime SDKs) calls; each gets an Agent Registry endpoint
+# in the gateway's regional registry. Matching is exact, so mTLS variants are listed too.
+aiplatform.googleapis.com
+us-central1-aiplatform.googleapis.com
+aiplatform.us-central1.rep.googleapis.com
+telemetry.googleapis.com
+cloudtrace.googleapis.com
+trace.googleapis.com
+logging.googleapis.com
+monitoring.googleapis.com
+cloudresourcemanager.googleapis.com
+iamcredentials.googleapis.com
+sts.googleapis.com
+oauth2.googleapis.com
+agentregistry.googleapis.com
+us-central1-agentregistry.googleapis.com
+secretmanager.googleapis.com
+storage.googleapis.com
+iap.googleapis.com

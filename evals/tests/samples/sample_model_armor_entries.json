@@ -1,0 +1,21 @@
+[
+  {"insertId": "ma-1", "logName": "projects/your-project-id/logs/modelarmor.googleapis.com%2Fsanitize_operations", "timestamp": "2026-11-27T15:00:00.300Z", "receiveTimestamp": "2026-11-27T15:00:50.000Z",
+   "labels": {"modelarmor.googleapis.com/client_name": "AGENT_GATEWAY"},
+   "jsonPayload": {"@type": "type.googleapis.com/google.cloud.modelarmor.logging.v1.SanitizeOperationLogEntry", "operationType": "SANITIZE_USER_PROMPT",
+     "sanitizationResult": {"filterMatchState": "NO_MATCH_FOUND", "filterResults": {
+       "pi_and_jailbreak": {"piAndJailbreakFilterResult": {"executionState": "EXECUTION_SUCCESS", "matchState": "NO_MATCH_FOUND"}},
+       "sdp": {"sdpFilterResult": {"inspectResult": {"executionState": "EXECUTION_SUCCESS", "matchState": "NO_MATCH_FOUND"}}}}}}},
+  {"insertId": "ma-2", "logName": "projects/your-project-id/logs/modelarmor.googleapis.com%2Fsanitize_operations", "timestamp": "2026-11-27T15:01:00.300Z",
+   "labels": {"modelarmor.googleapis.com/client_name": "AGENT_GATEWAY"},
+   "jsonPayload": {"operationType": "SANITIZE_USER_PROMPT",
+     "sanitizationResult": {"filterMatchState": "MATCH_FOUND", "filterResults": {
+       "pi_and_jailbreak": {"piAndJailbreakFilterResult": {"matchState": "MATCH_FOUND", "confidenceLevel": "HIGH"}},
+       "malicious_uris": {"maliciousUriFilterResult": {"matchState": "NO_MATCH_FOUND"}},
+       "rai": {"raiFilterResult": {"matchState": "NO_MATCH_FOUND", "raiFilterTypeResults": {"dangerous": {"matchState": "NO_MATCH_FOUND"}}}}}}}},
+  {"insertId": "ma-3", "logName": "projects/your-project-id/logs/modelarmor.googleapis.com%2Fsanitize_operations", "timestamp": "2026-11-27T15:02:00.300Z",
+   "labels": {"modelarmor.googleapis.com/client_name": "AGENT_GATEWAY"},
+   "jsonPayload": {"operation_type": "SANITIZE_USER_PROMPT",
+     "sanitization_result": {"filter_match_state": "MATCH_FOUND", "filter_results": [
+       {"key": "sdp", "value": {"sdp_filter_result": {"inspect_result": {"match_state": "MATCH_FOUND", "findings": [{"info_type": "US_SOCIAL_SECURITY_NUMBER"}]}}}},
+       {"key": "pi_and_jailbreak", "value": {"pi_and_jailbreak_filter_result": {"match_state": "NO_MATCH_FOUND"}}}]}}}
+]

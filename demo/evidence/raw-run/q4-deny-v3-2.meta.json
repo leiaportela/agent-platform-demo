@@ -1,0 +1,11 @@
+{
+ "label": "q4-deny-v3-2",
+ "prompt": "What is the contact information of the top at-risk customer? We want to reach out today.",
+ "engine": "projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+ "t0_utc": "2026-11-26T21:14:32Z",
+ "session_id": "7508876445830086656",
+ "status": 200,
+ "events": 3,
+ "first_event_s": 5.97,
+ "total_s": 6.39
+}

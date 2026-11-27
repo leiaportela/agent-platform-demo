@@ -1,0 +1,598 @@
+{
+ "deny_get_customer_contact": [
+  {
+   "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {
+     "code": 7,
+     "message": "Permission Denied."
+    },
+    "authenticationInfo": {
+     "serviceAccountDelegationInfo": [
+      {}
+     ],
+     "principalSubject": "principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+     "oauthInfo": {
+      "oauthClientId": "clientidmetadata.googleapis.com/agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"
+     }
+    },
+    "requestMetadata": {
+     "callerIp": "private",
+     "callerSuppliedUserAgent": "python-httpx/0.28.1",
+     "requestAttributes": {
+      "path": "/mcp",
+      "host": "agent-demo-mcp-123456789012.us-central1.run.app",
+      "time": "2026-11-26T22:13:15.987502864Z",
+      "auth": {}
+     },
+     "destinationAttributes": {}
+    },
+    "serviceName": "iap.googleapis.com",
+    "methodName": "GatekeeperAuthorizer.AuthorizeUser",
+    "authorizationInfo": [
+     {
+      "resource": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+      "permission": "iap.webServiceVersions.egressViaIAP",
+      "granted": false,
+      "resourceAttributes": {
+       "service": "iap.googleapis.com",
+       "name": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+       "type": "iap.googleapis.com/WebServiceVersion"
+      },
+      "permissionType": "ADMIN_READ"
+     }
+    ],
+    "resourceName": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "request": {
+     "@type": "type.googleapis.com/cloud.security.gatekeeper.AuthorizeUserRequest",
+     "httpRequest": {
+      "url": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp"
+     }
+    },
+    "metadata": {
+     "request_id": "2572107241619029354",
+     "mcp_attributes": {
+      "base_protocol_method": false,
+      "mcp_method": "tools/call",
+      "mcp_tool_name": "get_customer_contact",
+      "mcp_annotations": {
+       "open_world_hint": true,
+       "destructive_hint": true,
+       "read_only_hint": true,
+       "idempotent_hint": false
+      }
+     },
+     "device_state": "Unknown",
+     "policy_version": "POLICY_VERSION_V1",
+     "device_id": "",
+     "dryRun": false,
+     "oauth_client_id": ""
+    },
+    "callerAgent": {}
+   },
+   "insertId": "7j45pje7gyqu",
+   "resource": {
+    "type": "audited_resource",
+    "labels": {
+     "service": "iap.googleapis.com",
+     "project_id": "your-project-id",
+     "method": "GatekeeperAuthorizer.AuthorizeUser"
+    }
+   },
+   "timestamp": "2026-11-26T22:13:15.979991433Z",
+   "severity": "ERROR",
+   "labels": {
+    "iap.googleapis.com/audited_resource_name": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "iap.googleapis.com/audited_resource_type": "agentregistry.googleapis.com/McpServer",
+    "gen_ai.agent.name": "aiplatform"
+   },
+   "logName": "projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access",
+   "receiveTimestamp": "2026-11-26T22:13:16.935013592Z"
+  },
+  {
+   "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {
+     "code": 7,
+     "message": "Permission Denied."
+    },
+    "authenticationInfo": {
+     "serviceAccountDelegationInfo": [
+      {}
+     ],
+     "principalSubject": "principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+     "oauthInfo": {
+      "oauthClientId": "clientidmetadata.googleapis.com/agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"
+     }
+    },
+    "requestMetadata": {
+     "callerIp": "private",
+     "callerSuppliedUserAgent": "python-httpx/0.28.1",
+     "requestAttributes": {
+      "path": "/mcp",
+      "host": "agent-demo-mcp-123456789012.us-central1.run.app",
+      "time": "2026-11-26T22:13:16.913395699Z",
+      "auth": {}
+     },
+     "destinationAttributes": {}
+    },
+    "serviceName": "iap.googleapis.com",
+    "methodName": "GatekeeperAuthorizer.AuthorizeUser",
+    "authorizationInfo": [
+     {
+      "resource": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+      "permission": "iap.webServiceVersions.egressViaIAP",
+      "granted": false,
+      "resourceAttributes": {
+       "service": "iap.googleapis.com",
+       "name": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+       "type": "iap.googleapis.com/WebServiceVersion"
+      },
+      "permissionType": "ADMIN_READ"
+     }
+    ],
+    "resourceName": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "request": {
+     "@type": "type.googleapis.com/cloud.security.gatekeeper.AuthorizeUserRequest",
+     "httpRequest": {
+      "url": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp"
+     }
+    },
+    "metadata": {
+     "device_id": "",
+     "mcp_attributes": {
+      "mcp_annotations": {
+       "idempotent_hint": false,
+       "open_world_hint": true,
+       "destructive_hint": true,
+       "read_only_hint": true
+      },
+      "mcp_tool_name": "get_customer_contact",
+      "mcp_method": "tools/call",
+      "base_protocol_method": false
+     },
+     "dryRun": false,
+     "device_state": "Unknown",
+     "oauth_client_id": "",
+     "request_id": "8550383300104110005",
+     "policy_version": "POLICY_VERSION_V1"
+    },
+    "callerAgent": {}
+   },
+   "insertId": "1ne2qote29pob",
+   "resource": {
+    "type": "audited_resource",
+    "labels": {
+     "service": "iap.googleapis.com",
+     "method": "GatekeeperAuthorizer.AuthorizeUser",
+     "project_id": "your-project-id"
+    }
+   },
+   "timestamp": "2026-11-26T22:13:16.904852699Z",
+   "severity": "ERROR",
+   "labels": {
+    "gen_ai.agent.name": "aiplatform",
+    "iap.googleapis.com/audited_resource_type": "agentregistry.googleapis.com/McpServer",
+    "iap.googleapis.com/audited_resource_name": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002"
+   },
+   "logName": "projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access",
+   "receiveTimestamp": "2026-11-26T22:13:18.212803019Z"
+  },
+  {
+   "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {
+     "code": 7,
+     "message": "Permission Denied."
+    },
+    "authenticationInfo": {
+     "serviceAccountDelegationInfo": [
+      {}
+     ],
+     "principalSubject": "principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+     "oauthInfo": {
+      "oauthClientId": "clientidmetadata.googleapis.com/agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"
+     }
+    },
+    "requestMetadata": {
+     "callerIp": "private",
+     "callerSuppliedUserAgent": "python-httpx/0.28.1",
+     "requestAttributes": {
+      "path": "/mcp",
+      "host": "agent-demo-mcp-123456789012.us-central1.run.app",
+      "time": "2026-11-26T22:13:24.199055657Z",
+      "auth": {}
+     },
+     "destinationAttributes": {}
+    },
+    "serviceName": "iap.googleapis.com",
+    "methodName": "GatekeeperAuthorizer.AuthorizeUser",
+    "authorizationInfo": [
+     {
+      "resource": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+      "permission": "iap.webServiceVersions.egressViaIAP",
+      "granted": false,
+      "resourceAttributes": {
+       "service": "iap.googleapis.com",
+       "name": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+       "type": "iap.googleapis.com/WebServiceVersion"
+      },
+      "permissionType": "ADMIN_READ"
+     }
+    ],
+    "resourceName": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "request": {
+     "@type": "type.googleapis.com/cloud.security.gatekeeper.AuthorizeUserRequest",
+     "httpRequest": {
+      "url": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp"
+     }
+    },
+    "metadata": {
+     "request_id": "6429092366471494640",
+     "mcp_attributes": {
+      "mcp_annotations": {
+       "open_world_hint": true,
+       "idempotent_hint": false,
+       "read_only_hint": true,
+       "destructive_hint": true
+      },
+      "mcp_method": "tools/call",
+      "mcp_tool_name": "get_customer_contact",
+      "base_protocol_method": false
+     },
+     "oauth_client_id": "",
+     "device_state": "Unknown",
+     "device_id": "",
+     "policy_version": "POLICY_VERSION_V1",
+     "dryRun": false
+    },
+    "callerAgent": {}
+   },
+   "insertId": "xlv5qye6z4u5",
+   "resource": {
+    "type": "audited_resource",
+    "labels": {
+     "project_id": "your-project-id",
+     "method": "GatekeeperAuthorizer.AuthorizeUser",
+     "service": "iap.googleapis.com"
+    }
+   },
+   "timestamp": "2026-11-26T22:13:24.187029129Z",
+   "severity": "ERROR",
+   "labels": {
+    "iap.googleapis.com/audited_resource_name": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "iap.googleapis.com/audited_resource_type": "agentregistry.googleapis.com/McpServer",
+    "gen_ai.agent.name": "aiplatform"
+   },
+   "logName": "projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access",
+   "receiveTimestamp": "2026-11-26T22:13:24.823388244Z"
+  }
+ ],
+ "allow_tool": [
+  {
+   "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+     "serviceAccountDelegationInfo": [
+      {}
+     ],
+     "principalSubject": "principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+     "oauthInfo": {
+      "oauthClientId": "clientidmetadata.googleapis.com/agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"
+     }
+    },
+    "requestMetadata": {
+     "callerIp": "private",
+     "callerSuppliedUserAgent": "python-httpx/0.28.1",
+     "requestAttributes": {
+      "path": "/mcp",
+      "host": "agent-demo-mcp-123456789012.us-central1.run.app",
+      "time": "2026-11-26T22:13:04.336949481Z",
+      "auth": {}
+     },
+     "destinationAttributes": {}
+    },
+    "serviceName": "iap.googleapis.com",
+    "methodName": "GatekeeperAuthorizer.AuthorizeUser",
+    "authorizationInfo": [
+     {
+      "resource": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+      "permission": "iap.webServiceVersions.egressViaIAP",
+      "granted": true,
+      "resourceAttributes": {
+       "service": "iap.googleapis.com",
+       "name": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+       "type": "iap.googleapis.com/WebServiceVersion"
+      },
+      "permissionType": "ADMIN_READ"
+     }
+    ],
+    "resourceName": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "request": {
+     "httpRequest": {
+      "url": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp"
+     },
+     "@type": "type.googleapis.com/cloud.security.gatekeeper.AuthorizeUserRequest"
+    },
+    "metadata": {
+     "mcp_attributes": {
+      "base_protocol_method": false,
+      "mcp_method": "tools/call",
+      "mcp_tool_name": "list_top_churn_risk",
+      "mcp_annotations": {
+       "read_only_hint": true,
+       "destructive_hint": true,
+       "open_world_hint": true,
+       "idempotent_hint": false
+      }
+     },
+     "device_state": "Unknown",
+     "device_id": "",
+     "policy_version": "POLICY_VERSION_V1",
+     "dryRun": false,
+     "oauth_client_id": "",
+     "request_id": "948772827065207070"
+    },
+    "callerAgent": {}
+   },
+   "insertId": "k9m154e3ny9w",
+   "resource": {
+    "type": "audited_resource",
+    "labels": {
+     "project_id": "your-project-id",
+     "service": "iap.googleapis.com",
+     "method": "GatekeeperAuthorizer.AuthorizeUser"
+    }
+   },
+   "timestamp": "2026-11-26T22:13:04.335368296Z",
+   "severity": "INFO",
+   "labels": {
+    "iap.googleapis.com/audited_resource_type": "agentregistry.googleapis.com/McpServer",
+    "gen_ai.agent.name": "aiplatform",
+    "iap.googleapis.com/audited_resource_name": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002"
+   },
+   "logName": "projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access",
+   "receiveTimestamp": "2026-11-26T22:13:05.349788282Z"
+  },
+  {
+   "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+     "serviceAccountDelegationInfo": [
+      {}
+     ],
+     "principalSubject": "principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+     "oauthInfo": {
+      "oauthClientId": "clientidmetadata.googleapis.com/agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"
+     }
+    },
+    "requestMetadata": {
+     "callerIp": "private",
+     "callerSuppliedUserAgent": "python-httpx/0.28.1",
+     "requestAttributes": {
+      "path": "/mcp",
+      "host": "agent-demo-mcp-123456789012.us-central1.run.app",
+      "time": "2026-11-26T22:13:05.115555805Z",
+      "auth": {}
+     },
+     "destinationAttributes": {}
+    },
+    "serviceName": "iap.googleapis.com",
+    "methodName": "GatekeeperAuthorizer.AuthorizeUser",
+    "authorizationInfo": [
+     {
+      "resource": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+      "permission": "iap.webServiceVersions.egressViaIAP",
+      "granted": true,
+      "resourceAttributes": {
+       "service": "iap.googleapis.com",
+       "name": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002/versions/df_0",
+       "type": "iap.googleapis.com/WebServiceVersion"
+      },
+      "permissionType": "ADMIN_READ"
+     }
+    ],
+    "resourceName": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002",
+    "request": {
+     "httpRequest": {
+      "url": "https://agent-demo-mcp-123456789012.us-central1.run.app/mcp"
+     },
+     "@type": "type.googleapis.com/cloud.security.gatekeeper.AuthorizeUserRequest"
+    },
+    "metadata": {
+     "oauth_client_id": "",
+     "dryRun": false,
+     "device_state": "Unknown",
+     "device_id": "",
+     "mcp_attributes": {
+      "mcp_method": "tools/call",
+      "base_protocol_method": false,
+      "mcp_tool_name": "list_top_churn_risk",
+      "mcp_annotations": {
+       "idempotent_hint": false,
+       "destructive_hint": true,
+       "open_world_hint": true,
+       "read_only_hint": true
+      }
+     },
+     "request_id": "942553799049429200",
+     "policy_version": "POLICY_VERSION_V1"
+    },
+    "callerAgent": {}
+   },
+   "insertId": "gzl39ve3hyzz",
+   "resource": {
+    "type": "audited_resource",
+    "labels": {
+     "project_id": "your-project-id",
+     "method": "GatekeeperAuthorizer.AuthorizeUser",
+     "service": "iap.googleapis.com"
+    }
+   },
+   "timestamp": "2026-11-26T22:13:05.114393285Z",
+   "severity": "INFO",
+   "labels": {
+    "iap.googleapis.com/audited_resource_type": "agentregistry.googleapis.com/McpServer",
+    "gen_ai.agent.name": "aiplatform",
+    "iap.googleapis.com/audited_resource_name": "projects/123456789012/locations/us-central1/mcpServers/agentregistry-00000000-0000-0000-0000-000000000002"
+   },
+   "logName": "projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access",
+   "receiveTimestamp": "2026-11-26T22:13:05.990878806Z"
+  }
+ ],
+ "allow_handshake": [],
+ "allow_google_api_endpoint": [
+  {
+   "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+     "serviceAccountDelegationInfo": [
+      {}
+     ],
+     "principalSubject": "principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+     "oauthInfo": {
+      "oauthClientId": "clientidmetadata.googleapis.com/agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"
+     }
+    },
+    "requestMetadata": {
+     "callerIp": "private",
+     "callerSuppliedUserAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+     "requestAttributes": {
+      "path": "/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions",
+      "host": "us-central1-aiplatform.googleapis.com",
+      "time": "2026-11-26T22:13:00.480362955Z",
+      "auth": {}
+     },
+     "destinationAttributes": {}
+    },
+    "serviceName": "iap.googleapis.com",
+    "methodName": "GatekeeperAuthorizer.AuthorizeUser",
+    "authorizationInfo": [
+     {
+      "resource": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/endpoints/agentregistry-00000000-0000-0000-0000-000000000001/versions/df_0",
+      "permission": "iap.webServiceVersions.egressViaIAP",
+      "granted": true,
+      "resourceAttributes": {
+       "service": "iap.googleapis.com",
+       "name": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/endpoints/agentregistry-00000000-0000-0000-0000-000000000001/versions/df_0",
+       "type": "iap.googleapis.com/WebServiceVersion"
+      },
+      "permissionType": "ADMIN_READ"
+     }
+    ],
+    "resourceName": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/endpoints/agentregistry-00000000-0000-0000-0000-000000000001",
+    "request": {
+     "httpRequest": {
+      "url": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/your-project-id/locations/us-central1/reasoningEngines/1234567890123456789/sessions"
+     },
+     "@type": "type.googleapis.com/cloud.security.gatekeeper.AuthorizeUserRequest"
+    },
+    "metadata": {
+     "device_state": "Unknown",
+     "request_id": "9503517918040876995",
+     "device_id": "",
+     "oauth_client_id": "",
+     "policy_version": "POLICY_VERSION_V1",
+     "dryRun": false
+    },
+    "callerAgent": {}
+   },
+   "insertId": "ilqw3xe18esd",
+   "resource": {
+    "type": "audited_resource",
+    "labels": {
+     "project_id": "your-project-id",
+     "service": "iap.googleapis.com",
+     "method": "GatekeeperAuthorizer.AuthorizeUser"
+    }
+   },
+   "timestamp": "2026-11-26T22:13:00.479374825Z",
+   "severity": "INFO",
+   "labels": {
+    "gen_ai.agent.name": "aiplatform",
+    "iap.googleapis.com/audited_resource_type": "agentregistry.googleapis.com/Endpoint",
+    "iap.googleapis.com/audited_resource_name": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001"
+   },
+   "logName": "projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access",
+   "receiveTimestamp": "2026-11-26T22:13:01.239724166Z"
+  },
+  {
+   "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+     "serviceAccountDelegationInfo": [
+      {}
+     ],
+     "principalSubject": "principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789",
+     "oauthInfo": {
+      "oauthClientId": "clientidmetadata.googleapis.com/agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"
+     }
+    },
+    "requestMetadata": {
+     "callerIp": "private",
+     "callerSuppliedUserAgent": "google-genai-sdk/2.34.0+vertex-genai-modules/2.10.0 gl-python/3.12.14",
+     "requestAttributes": {
+      "path": "/v1beta1/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789/sessions/1301843035964833792",
+      "host": "us-central1-aiplatform.googleapis.com",
+      "time": "2026-11-26T22:13:00.632204448Z",
+      "auth": {}
+     },
+     "destinationAttributes": {}
+    },
+    "serviceName": "iap.googleapis.com",
+    "methodName": "GatekeeperAuthorizer.AuthorizeUser",
+    "authorizationInfo": [
+     {
+      "resource": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/endpoints/agentregistry-00000000-0000-0000-0000-000000000001/versions/df_0",
+      "permission": "iap.webServiceVersions.egressViaIAP",
+      "granted": true,
+      "resourceAttributes": {
+       "service": "iap.googleapis.com",
+       "name": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/endpoints/agentregistry-00000000-0000-0000-0000-000000000001/versions/df_0",
+       "type": "iap.googleapis.com/WebServiceVersion"
+      },
+      "permissionType": "ADMIN_READ"
+     }
+    ],
+    "resourceName": "projects/123456789012/locations/us-central1/iap_web/agentRegistry/endpoints/agentregistry-00000000-0000-0000-0000-000000000001",
+    "request": {
+     "httpRequest": {
+      "url": "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789/sessions/1301843035964833792"
+     },
+     "@type": "type.googleapis.com/cloud.security.gatekeeper.AuthorizeUserRequest"
+    },
+    "metadata": {
+     "dryRun": false,
+     "device_id": "",
+     "request_id": "7513027351097956353",
+     "oauth_client_id": "",
+     "policy_version": "POLICY_VERSION_V1",
+     "device_state": "Unknown"
+    },
+    "callerAgent": {}
+   },
+   "insertId": "aa0lh1e2rvif",
+   "resource": {
+    "type": "audited_resource",
+    "labels": {
+     "service": "iap.googleapis.com",
+     "project_id": "your-project-id",
+     "method": "GatekeeperAuthorizer.AuthorizeUser"
+    }
+   },
+   "timestamp": "2026-11-26T22:13:00.631336196Z",
+   "severity": "INFO",
+   "labels": {
+    "iap.googleapis.com/audited_resource_type": "agentregistry.googleapis.com/Endpoint",
+    "iap.googleapis.com/audited_resource_name": "projects/123456789012/locations/us-central1/endpoints/agentregistry-00000000-0000-0000-0000-000000000001",
+    "gen_ai.agent.name": "aiplatform"
+   },
+   "logName": "projects/your-project-id/logs/cloudaudit.googleapis.com%2Fdata_access",
+   "receiveTimestamp": "2026-11-26T22:13:01.447521673Z"
+  }
+ ]
+}

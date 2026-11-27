@@ -1,0 +1,5 @@
+name: agent-demo-ingress-gw
+protocols:
+  - MCP
+googleManaged:
+  governedAccessPath: CLIENT_TO_AGENT

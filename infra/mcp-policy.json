@@ -1,0 +1,13 @@
+{
+  "bindings": [{
+    "role": "roles/iap.egressor",
+    "members": ["principal://agents.global.org-111111111111.system.id.goog/resources/aiplatform/projects/123456789012/locations/us-central1/reasoningEngines/1234567890123456789"],
+    "condition": {
+      "title": "pipelines analyst: analytics tools only",
+      "description": "Allows the six read-only analytics tools; get_customer_contact (PII) is not listed, so it is denied.",
+      "expression": "api.getAttribute('iap.googleapis.com/mcp.toolName', '') in ['get_latest_run', 'get_model_summary', 'list_top_churn_risk', 'get_churn_drivers', 'get_clv_segments', 'get_demand_outlook', '']"
+    }
+  }],
+  "etag": "ACAB",
+  "version": 3
+}
